@@ -453,6 +453,22 @@
         }
       ],
       "id": 5
+    },
+    {
+      "name": "Juliana",
+      "email": "juliana@gmail.com",
+      "emailConfirmation": "juliana@gmail.com",
+      "address": "Rua Amazonas",
+      "number": "25",
+      "optionalAddress": "Casa",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 6
     }
   ]
 }
