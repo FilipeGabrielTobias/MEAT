@@ -8,7 +8,7 @@ import {handleAuthentication} from './auth';
 import {handleAuthorization} from './authz';
 
 const server: Express = jsonServer.create();
-const router = jsonServer.router('db.json')
+const router = jsonServer.router('./db.json')
 const middlewares = jsonServer.defaults()
 
 // Set default middlewares (logger, static, cors and no-cache)
@@ -28,6 +28,6 @@ const options = {
   key: fs.readFileSync('./backend/keys/key.pem')
 } 
 
-https.createServer(options, server).listen(3001, () => {
-  console.log('JSON Server is running on https://localhost:3001');
+server.listen(3001, () => {
+  console.log('JSON Server is running on http://localhost:3001');
 })
