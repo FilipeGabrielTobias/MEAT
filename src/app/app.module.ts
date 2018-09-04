@@ -19,7 +19,11 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy, registerLocaleData } from '@angular/common';
+import locatePt from '@angular/common/locales/pt';
+
+registerLocaleData(locatePt, 'pt');
+
 import { LoginComponent } from './security/login/login.component';
 import { UserDetailComponent } from './header/user-detail/user-detail.component';
 import { ApplicationErrorHandler } from './app.error-handler';
@@ -55,7 +59,7 @@ import { ApplicationErrorHandler } from './app.error-handler';
     },
     {
       provide: LOCALE_ID, 
-      useValue: 'pt-BR'
+      useValue: 'pt'
     },
     {
       provide: ErrorHandler, useClass: ApplicationErrorHandler
